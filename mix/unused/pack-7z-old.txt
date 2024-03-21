@@ -1,0 +1,32 @@
+@rem ---- сжатие 7z в данный момент не используетс€; этот файл устарел, и, возможно, не работает вовсе -----
+
+
+@set mywinrar=c:\Soft\WRar\WinRAR.exe
+@set my7z=C:\Soft\7-Zip\7z.exe
+@set mysvn=193SVN5112
+@set mysvndrive=D:
+@set mypath2svn=%mysvndrive%\!
+@set mytitle=mix\pack-title.txt
+@set myreldir=c:\Temp\Release
+@rem -----------------------------------
+@rem ** Special for: http://rofan.ru **
+@rem ** упаковка релиза одним кликом **
+@rem ** Ї€ръютър ®хышчр юфэшь ъышъюь **
+@rem -----------------------------------
+@echo PACKING OpenKore %mypath2svn%\%mysvn% ...
+@echo.|time
+@%mysvndrive%
+@cd %mypath2svn%
+@rem ---
+@REM %mywinrar% a -s -r %TEMP%\%mysvn%.rar %mysvn% -z%mypath2svn%\%mysvn%\%mytitle% -x*.exe -x*.fld
+@REM %mywinrar% m -afzip %myreldir%\%mysvn%.zip %TEMP%\%mysvn%.rar -z%mypath2svn%\%mysvn%\%mytitle%
+@rem ---
+@rem *ultra*:
+@REM %my7z% a -r -t7z -m9=LZMA %TEMP%\%mysvn%.7z %mysvn%
+@rem *medium*:
+@%my7z% a -r -t7z -m8=LZMA %TEMP%\%mysvn%.7z %mysvn%
+@%mywinrar% m -afzip %myreldir%\%mysvn%.zip %TEMP%\%mysvn%.7z -z%mypath2svn%\%mysvn%\%mytitle%
+@rem ---
+@echo.|time
+@echo READY COMRAD
+@pause

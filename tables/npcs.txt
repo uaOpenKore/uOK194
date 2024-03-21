@@ -1,0 +1,17 @@
+prontera 146 163 Novice Castles
+prontera 165 178 Old Woman
+prontera 155 190 Kriemhild#p1-1
+prontera 154 187 Guide
+prontera 157 187 Smile Assistance#7
+prontera 150 193 Reset Girl
+prontera 146 194 Swanhild#p2-1
+prontera 154 198 Geovani
+prontera 156 197 Welcome Sign
+prontera 162 194 WoE Setter
+prontera 165 194 Gondul#p5-1
+prontera 160 133 YuPi
+prontera 148 49 Bulletin Board
+prontera 151 29 Kafra
+prontera 160 29 Guide#4
+pay_gld 143 160 SacredAltar#f4-2
+pay_gld 271 163 Scarlet Palace#f2-5

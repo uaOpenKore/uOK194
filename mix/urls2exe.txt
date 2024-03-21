@@ -1,0 +1,5 @@
+URLs to compilled EXE- & DLL-files:
+
+http://www.openkore.com/misc/wxstart.zip
+http://www.openkore.com/misc/start.zip
+http://www.openkore.com/misc/XSTools.zip

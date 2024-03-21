@@ -1,0 +1,58 @@
+automacro uaro@night {
+	console /(From: uaRO)/i
+	delay 1
+	call {
+		do e ...
+	}
+}
+
+automacro pm2me {
+	console /From:/
+	delay 25
+	call {
+		#do relog 1211
+		do e ...
+	}
+}
+
+
+#------------------------
+
+macro aistart {
+	do conf route_randomWalk 1
+	do conf attackAuto 2
+	do conf itemsTakeAuto 1 
+	do conf itemsGatherAuto 1
+	do conf sitAuto_idle 1
+	do conf dealAuto 1
+	do conf partyAuto 1
+	do conf guildAutoDeny 1
+	do move ===AI=ON===
+}
+macro aistop {
+	do conf route_randomWalk 0
+	do conf attackAuto 0
+	do conf itemsTakeAuto 0
+	do conf itemsGatherAuto 0
+	do conf sitAuto_idle 0
+	do conf dealAuto 0
+	do conf partyAuto 0
+	do conf guildAutoDeny 0
+	#do conf dcOnDeath 0
+	#do conf dcOnMute 0
+	#do conf dcOnPM 0
+	do move ===AI=OFF===
+}
+
+macro lockThisMap {
+	do conf lockMap $.map
+	do reload config
+	do move $.map
+}
+macro unlockThisMap {
+	do conf lockMap ""
+	do reload config
+	do move ==Unlocked==
+}
+
+#----------------------------------------

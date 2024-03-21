@@ -1,0 +1,20 @@
+Актуально на 28.03.2007.
+
+## http://www.raggame.ru/
+[Russia - rRO]
+ip 81.177.13.7
+port 6900
+master_version 25
+version 101
+serverType 13
+serverEncoding Russian
+pauseCharServer 1
+patchserver web.raggame.ru
+patchpath /patch02
+paddedPackets 1
+paddedPackets_attackID 0x0190
+paddedPackets_skillUseID 0x7E
+# Data for XKore PP mode
+syncID 0x0116
+syncTickOffset 9
+mapLoadedTickOffset 11

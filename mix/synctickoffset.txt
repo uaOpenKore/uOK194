@@ -1,0 +1,14 @@
+-----------------
+Метод вычисления смещений, используемый в режиме xKore 1 на серверах с PP.
+-----------------
+
+http://rofan.ru/viewtopic.php?p=19918#19918
+japplegame:
+
+syncTickOffset 9
+mapLoadedTickOffset 11
+
+syncTickOffset = 2 + длина_всех_junk'ов_перед_syncSync_в_функции_sendSync = 2 + 7 = 9
+mapLoadedTickOffset = syncTickOffset + длина_MapLoaded = syncTickOffset + 2 = 9 + 2 = 11
+
+--

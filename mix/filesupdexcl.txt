@@ -1,0 +1,13 @@
+*.exe
+*.fld
+*.dll
+*.po
+*.mo
+*.wav
+portals*.txt
+itemsd*.txt
+*.c
+*.cpp
+*.h
+*.xs
+skillsdes*.txt

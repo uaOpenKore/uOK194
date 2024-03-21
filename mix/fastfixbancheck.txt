@@ -1,0 +1,41 @@
+Misc.pm:
+
+	if ($plugin_args{autoLogin} && @chars && $config{char} ne "" && $chars[$config{char}]) {
++		$messageSender->sendBanCheck($accountID);
+		$messageSender->sendCharLogin($config{char});
+		$timeout{charlogin}{time} = time;
+		return 1;
+	}
+
+	if (@chars) {
+		my @choices = @charNames;
+		push @choices, (T('Create a new character'), T('Delete a character'));
+		my $choice = $interface->showMenu(
+			T("Please chooce a character or an action."), \@choices,
+			title => T("Character selection"));
+		if ($choice == -1) {
+			# User cancelled
+			quit();
+			return 0;
+
+		} elsif ($choice < @charNames) {
+			# Character chosen
+			configModify('char', $charNameIndices[$choice], 1);
++			$messageSender->sendBanCheck($accountID);
+			$messageSender->sendCharLogin($config{char});
+			$timeout{charlogin}{time} = time;
+			return 1;
+
+		} elsif ($choice == @charNames) {
+			# 'Create character' chosen
+			$mode = "create";
+
+		} else {
+			# 'Delete character' chosen
+			$mode = "delete";
+		}
+	} else {
+		message T("There are no characters on this account.\n"), "connection";
+		$mode = "create";
+	}
+

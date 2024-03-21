@@ -1,0 +1,15 @@
+# This file contains information about master servers.
+
+#####################
+
+
+[uaRO]
+#ip 62.149.12.100
+ip play.uaro.kiev.ua
+port 16900
+master_version 17
+version 20
+serverType 3
+serverEncoding Russian
+private 1
+charBlockSize 106
